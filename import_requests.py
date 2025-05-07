@@ -23,7 +23,7 @@ for country in countries:
     if response.status_code == 200:
         array_of_json_objects.append(response.json())
     else:
-        print("Error fetching data from API")
+        print(f"Error fetching data from API for country {country}")
 
 # Extracting the required data
 file_path=f"extracted_data/covid_data_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
